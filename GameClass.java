@@ -22,7 +22,8 @@ public class GameClass {
         if (result > 0) {
             System.out.println(player1.getName() + " WINS");
             double damage = result * player1.getAttack() / player2.getDefense();
-            System.out.println(player2.getName() + " took " + damage + " damage!");
+
+            System.out.printf("%s took %.2f damage ", player2.getName(), damage);
             player2.takeDamage(damage);
             System.out.println(player1.getName() + " GETS TO ROLL WINNER DIE: ");
             System.out.print("Roll winner die? y/n: ");
@@ -32,7 +33,7 @@ public class GameClass {
         } else if (result < 0) {
             System.out.println(player2.getName() + " WINS");
             double damage = (result * -1) * player2.getAttack() / player1.getDefense();
-            System.out.println(player1.getName() + " took " + damage + " damage!");
+            System.out.printf("%s took %.2f damage ", player1.getName(), damage);
             player1.takeDamage(damage);
             System.out.println(player2.getName() + " GETS TO ROLL WINNER DIE: ");
             System.out.print("Roll winner die? y/n: ");
