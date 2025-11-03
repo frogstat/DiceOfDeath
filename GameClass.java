@@ -44,7 +44,7 @@ public class GameClass {
                 System.out.println("Celebrated to soon bitch, you may have won this rond but you leave as half a man");
             }
             case 2 -> System.out.println("Fucking nothing");
-            case 3 -> System.out.println("HAHAHHAHA, winners lose");
+            case 3 -> System.out.println("HAHAHHAHA, nothing happens");
             case 4 -> {
                 player.setAttack(player.getAttack() * 1.5);
                 System.out.println(
