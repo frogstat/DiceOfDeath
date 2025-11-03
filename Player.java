@@ -14,19 +14,19 @@ public class Player {
 
     public String getHealthInfo(){
         if(health > 75){
-            return name + " looks good! HP: " + health;
+            return name + " looks good! HP: " + health + ". ATK: " + attack + ". DEF: " + defense;
         }
         else if (health > 50){
-            return name + " looks okay. HP: " + health;
+            return name + " looks okay. HP: " + health + ". ATK: " + attack + ". DEF: " + defense;
         }
         else if (health > 25){
-            return name + " looks bad, man. HP: " + health;
+            return name + " looks bad, man. HP: " + health + ". ATK: " + attack + ". DEF: " + defense;
         }
         else if (health > 0){
-            return name + " looks almost dead... Uh oh! HP: " + health;
+            return name + " looks almost dead... Uh oh! HP: " + health + ". ATK: " + attack + ". DEF: " + defense;
         }
         else{
-            return name + " is dead. RIP HP: " + health;
+            return name + " is dead. RIP HP: " + health + ". ATK: " + attack + ". DEF: " + defense;
         }
     }
 
