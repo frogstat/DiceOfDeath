@@ -1,6 +1,9 @@
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
         Dice dice = new Dice();
         GameClass diceOfDeath = new GameClass(dice);
 
@@ -9,19 +12,12 @@ public class Main {
 
         System.out.println("Welcome to Dice of Death!");
         System.out.println("**************************");
-        System.out.println(dice.rollDice());
-        System.out.println(dice.rollDice());
-        System.out.println(dice.rollDice());
-        System.out.println(dice.rollDice());
-        System.out.println(dice.rollDice());
 
         while(player1.getHealth() > 0 || player2.getHealth() > 0){
-
-            diceOfDeath.playRound(player1, player2);
-
-
-
-
+            System.out.print("Type roll to play round: ");
+            if(scanner.nextLine().equalsIgnoreCase("roll")){
+                diceOfDeath.playRound(player1, player2);
+            }
         }
 
     }
