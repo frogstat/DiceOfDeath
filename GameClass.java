@@ -18,12 +18,14 @@ public class GameClass {
 
         int result = getWinner(player1, player2);
         if (result > 0) {
+            System.out.println(player1 + " WINS");
             player2.takeDamage(result * player1.getAttack() * player2.getDefense());
-            System.out.print("WINNER DIE: ");
+            System.out.println("WINNER GETS TO ROLL WINNER DIE: ");
             getReward(player1);
         } else if (result < 0) {
+            System.out.println(player2 + " WINS");
             player1.takeDamage((result * -1) * player2.getAttack() * player1.getDefense());
-            System.out.print("WINNER DIE: ");
+            System.out.println("WINNER GETS TO ROLL WINNER DIE: ");
             getReward(player2);
         } else if (result == 0) {
             System.out.println("It's a tie!");
