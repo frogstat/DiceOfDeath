@@ -16,14 +16,15 @@ public class GameClass {
         return resultPlayer1 - resultPlayer2; // negative = player 2 wins.
     }
 
-    public void playRound(Player player1, Player player2, Scanner scanner) {
+    public void playRound(Player player1, Player player2, Player winner, Scanner scanner) {
 
         int result = getWinner(player1, player2);
         if (result > 0) {
             System.out.println(player1.getName() + " WINS");
+            winner = player1;
             double damage = result * player1.getAttack() / player2.getDefense();
 
-            System.out.printf("%s took %.2f damage ", player2.getName(), damage);
+            System.out.printf("%s took %.2f damage%n", player2.getName(), damage);
             player2.takeDamage(damage);
             System.out.println(player1.getName() + " GETS TO ROLL WINNER DIE: ");
             System.out.print("Roll winner die? y/n: ");
@@ -31,9 +32,10 @@ public class GameClass {
                 getReward(player1);
             }
         } else if (result < 0) {
+            winner = player2;
             System.out.println(player2.getName() + " WINS");
             double damage = (result * -1) * player2.getAttack() / player1.getDefense();
-            System.out.printf("%s took %.2f damage ", player1.getName(), damage);
+            System.out.printf("%s took %.2f damage%n", player1.getName(), damage);
             player1.takeDamage(damage);
             System.out.println(player2.getName() + " GETS TO ROLL WINNER DIE: ");
             System.out.print("Roll winner die? y/n: ");
