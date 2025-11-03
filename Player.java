@@ -1,10 +1,10 @@
 public class Player {
     private String name;
-    private int health;
+    private double health;
     private double attack;
     private double defense;
 
-    public Player(String name, int health, int highScore, int gamesPlayed) {
+    public Player(String name, double health, int highScore, int gamesPlayed) {
         this.name = name;
         this.health = health;
         this.attack = 1;
@@ -30,7 +30,7 @@ public class Player {
         }
     }
 
-    public void takeDamage(int dmg) {
+    public void takeDamage(double dmg) {
         this.health -= dmg;
     }
 
@@ -52,13 +52,13 @@ public class Player {
 
 
 
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 
 
 
-    public void setHealth(int health) {
+    public void setHealth(double health) {
         this.health = health;
     }
 
