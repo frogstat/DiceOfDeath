@@ -30,7 +30,7 @@ public class Main {
                 System.out.println(player2.getHealthInfo());
                 System.out.print(winner.getName() + "! Type roll to play round: ");
                 if (scanner.nextLine().equalsIgnoreCase("roll")) {
-                    diceOfDeath.playRound(player1, player2, winner, scanner);
+                    winner = diceOfDeath.playRound(player1, player2, winner, scanner);
                 }
             }
             winner = player1.getHealth() > 0 ? player1 : player2;

@@ -16,7 +16,7 @@ public class GameClass {
         return resultPlayer1 - resultPlayer2; // negative = player 2 wins.
     }
 
-    public void playRound(Player player1, Player player2, Player winner, Scanner scanner) {
+    public Player playRound(Player player1, Player player2, Player winner, Scanner scanner) {
 
         int result = getWinner(player1, player2);
         if (result > 0) {
@@ -45,6 +45,7 @@ public class GameClass {
         } else if (result == 0) {
             System.out.println("It's a tie!");
         }
+        return winner;
     }
 
     public void getReward(Player player) {
