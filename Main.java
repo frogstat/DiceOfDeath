@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Welcome to Dice of Death!");
         System.out.println("**************************");
 
-        while(player1.getHealth() > 0 || player2.getHealth() > 0){
+        while(player1.getHealth() > 0 && player2.getHealth() > 0){
             System.out.println(player1.getHealthInfo());
             System.out.println(player2.getHealthInfo());
             System.out.print("Type roll to play round: ");
