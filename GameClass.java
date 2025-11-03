@@ -50,6 +50,9 @@ public class GameClass {
             case 6 -> {
                 player.setAttack(player.getAttack() * 1.5);
                 player.setDefense(player.getDefense() * 1.5);
+                System.out.println("Oh my gawd, you look both strong and sturdy as my grandpa Bo-Åke " + 
+                "According to himself, he's the only Bo-Åke in Sweden." +
+                "According to Ratsit, there are 1336 Bo-Åke, how bout that?" );
             }
 
         }
