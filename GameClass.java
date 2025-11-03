@@ -28,5 +28,18 @@ public class GameClass {
             System.out.println("It's a tie!");
         }
     }
+    public void getReward(Player player) {
+       Dice dice = new Dice();
+        switch (dice.rollDice()) {
+            case 1 ->{ player.setDefense(player.getDefense() / 2); 
+            System.out.println("Celebrated to soon bitch, you may have won this rond but you leave as half a man");}
+            case 2 -> System.out.println("Fucking nothing");
+            case 3 -> System.out.println("HAHAHHAHA, winners lose");
+            case 4 -> player.setAttack(player.getAttack()* 1.5);
+            
+           
+            
+        }
+    }
 
 }
