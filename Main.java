@@ -22,7 +22,7 @@ public class Main {
             DEATH
             """);
 
-        while(true) {
+        game: while(true) {
             while (player1.getHealth() > 0 && player2.getHealth() > 0) {
                 System.out.println("**************************");
                 System.out.println(player1.getHealthInfo());
@@ -37,12 +37,20 @@ public class Main {
             System.out.println("Score: " + player1.getName() + ": " +  player1.getGamesWon());
             System.out.println("Score: " + player2.getName() + ": " +  player2.getGamesWon());
             System.out.println(winner.getName() + " wins!");
-            System.out.print("Play again? y/n: ");
-            if (scanner.nextLine().equalsIgnoreCase("y")) {
-                player1.resetStats();
-                player2.resetStats();
-            } else if(scanner.nextLine().equalsIgnoreCase("n")) {
-                break;
+            String answer = "";
+            while(true) {
+                System.out.print("Play again? y/n: ");
+                answer = scanner.nextLine();
+                if (answer.equalsIgnoreCase("y")) {
+                    player1.resetStats();
+                    player2.resetStats();
+                    continue game;
+                } else if (answer.equalsIgnoreCase("n")) {
+                    break game;
+                }
+                else{
+                    System.out.println("Please type y or n.");
+                }
             }
         }
         if(player1.getGamesWon() > player2.getGamesWon()){
