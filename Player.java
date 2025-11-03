@@ -3,13 +3,31 @@ public class Player {
     private double health;
     private double attack;
     private double defense;
+    private int gamesWon;
 
-    public Player(String name, double health, int highScore, int gamesPlayed) {
+
+
+    public Player(String name, double health, int gamesWon, int gamesPlayed) {
         this.name = name;
         this.health = health;
         this.attack = 1;
         this.defense = 1;
+        this.gamesWon = 0;
 
+    }
+
+    public void resetStats(){
+        health = 100;
+        attack = 1;
+        defense = 1;
+    }
+
+    public int getGamesWon() {
+        return gamesWon;
+    }
+
+    public void addGamesWon() {
+        this.gamesWon++;
     }
 
     public String getHealthInfo(){
@@ -37,6 +55,8 @@ public class Player {
     public boolean isAlive() {
         return this.health > 0;
     }
+
+
 
 
 
