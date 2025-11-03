@@ -70,7 +70,7 @@ public class Player {
 
 
 
-    public void setAttack(int attack) {
+    public void setAttack(double attack) {
         this.attack = attack;
     }
 
@@ -82,7 +82,7 @@ public class Player {
 
 
 
-    public void setDefense(int defense) {
+    public void setDefense(double defense) {
         this.defense = defense;
     }
 }
