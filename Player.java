@@ -41,7 +41,7 @@ public class Player {
             return String.format("%s looks bad, man! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
         else if (health > 0){
-            return String.format("%s almost dead! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
+            return String.format("%s is almost dead! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
         else{
             return String.format("%s is dead! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
