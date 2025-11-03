@@ -7,7 +7,7 @@ public class Player {
 
 
 
-    public Player(String name, double health, int gamesWon, int gamesPlayed) {
+    public Player(String name, double health, int gamesWon) {
         this.name = name;
         this.health = health;
         this.attack = 1;

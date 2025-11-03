@@ -7,8 +7,8 @@ public class Main {
         Dice dice = new Dice();
         GameClass diceOfDeath = new GameClass(dice);
 
-        Player player1 = new Player("Felix", 100, 0,0);
-        Player player2 = new Player("Eric", 100, 0,0);
+        Player player1 = new Player("Felix", 100, 0);
+        Player player2 = new Player("Eric", 100, 0);
 
         System.out.println("Welcome to Dice of Death!");
 
