@@ -32,19 +32,19 @@ public class Player {
 
     public String getHealthInfo(){
         if(health > 75){
-            return String.format("%s looks good! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
+            return String.format("%s looks fokking strong! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
         else if (health > 50){
-            return String.format("%s looks okay! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
+            return String.format("%s looks injured, are you okay? HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
         else if (health > 25){
-            return String.format("%s looks bad, man! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
+            return String.format("%s this is bound to go to the shitters! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
         else if (health > 0){
-            return String.format("%s is almost dead! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
+            return String.format("%s is blinded by the blood of his broken spirit! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
         else{
-            return String.format("%s is dead! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
+            return String.format("%s is DEAAAAAD, pff! HP: %.1f. ATK: %.1f. DEF: %.1f", name, health, attack, defense);
         }
     }
 

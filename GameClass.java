@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class GameClass {
 
     private Dice dice;
@@ -14,23 +16,29 @@ public class GameClass {
         return resultPlayer1 - resultPlayer2; // negative = player 2 wins.
     }
 
-    public void playRound(Player player1, Player player2) {
+    public void playRound(Player player1, Player player2, Scanner scanner) {
 
         int result = getWinner(player1, player2);
         if (result > 0) {
             System.out.println(player1.getName() + " WINS");
             double damage = result * player1.getAttack() / player2.getDefense();
-            System.out.printf("%s took %.2f damage!%n", player2.getName(), damage);
+            System.out.println(player2.getName() + " took " + damage + " damage!");
             player2.takeDamage(damage);
             System.out.println("WINNER GETS TO ROLL WINNER DIE: ");
-            getReward(player1);
+            System.out.print("Roll winner die? y/n: ");
+            if (scanner.nextLine().equalsIgnoreCase("y")) {
+                getReward(player1);
+            }
         } else if (result < 0) {
             System.out.println(player2.getName() + " WINS");
             double damage = (result * -1) * player2.getAttack() / player1.getDefense();
-            System.out.printf("%s took %.2f damage!%n", player1.getName(), damage);
+            System.out.println(player1.getName() + " took " + damage + " damage!");
             player1.takeDamage(damage);
             System.out.println("WINNER GETS TO ROLL WINNER DIE: ");
-            getReward(player2);
+            System.out.print("Roll winner die? y/n: ");
+            if (scanner.nextLine().equalsIgnoreCase("y")) {
+                getReward(player2);
+            }
         } else if (result == 0) {
             System.out.println("It's a tie!");
         }
@@ -58,9 +66,9 @@ public class GameClass {
             case 6 -> {
                 player.setAttack(player.getAttack() * 1.5);
                 player.setDefense(player.getDefense() * 1.5);
-                System.out.println("Oh my gawd, you look both strong and sturdy as my grandpa Bo-Åke " + 
-                "According to himself, he's the only Bo-Åke in Sweden." +
-                "According to Ratsit, there are 1336 Bo-Åke, how bout that?" );
+                System.out.println("Oh my gawd, you look both strong and sturdy as my grandpa Bo-Åke " +
+                        "According to himself, he's the only Bo-Åke in Sweden." +
+                        "According to Ratsit, there are 1336 Bo-Åke, how bout that?");
             }
 
         }

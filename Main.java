@@ -11,15 +11,25 @@ public class Main {
         Player player2 = new Player("Eric", 100, 0);
 
         System.out.println("Welcome to Dice of Death!");
+        System.out.println("""
+            You die, I die, we all dice...
+            This is not a game of chance
+            This is not a game for the faint of heart
+            WRLCOME TO HELL
+            Two player enters
+            Only one will return.
+            Mordor aint shit compared to:
+            DEATH
+            """);
 
-        game: while(true) {
+        while(true) {
             while (player1.getHealth() > 0 && player2.getHealth() > 0) {
                 System.out.println("**************************");
                 System.out.println(player1.getHealthInfo());
                 System.out.println(player2.getHealthInfo());
                 System.out.print("Type roll to play round: ");
                 if (scanner.nextLine().equalsIgnoreCase("roll")) {
-                    diceOfDeath.playRound(player1, player2);
+                    diceOfDeath.playRound(player1, player2, scanner);
                 }
             }
             Player winner = player1.getHealth() > 0 ? player1 : player2;
@@ -27,20 +37,12 @@ public class Main {
             System.out.println("Score: " + player1.getName() + ": " +  player1.getGamesWon());
             System.out.println("Score: " + player2.getName() + ": " +  player2.getGamesWon());
             System.out.println(winner.getName() + " wins!");
-            String answer = "";
-            while(!answer.equalsIgnoreCase("y") || !answer.equalsIgnoreCase("n")){
-                System.out.print("Play again? y/n: ");
-                answer = scanner.nextLine();
-                if (answer.equalsIgnoreCase("y")) {
-                    player1.resetStats();
-                    player2.resetStats();
-                    continue game;
-                } else if(answer.equalsIgnoreCase("n")) {
-                    break game;
-                }
-                else{
-                    System.out.println("Please enter y or n");
-                }
+            System.out.print("Play again? y/n: ");
+            if (scanner.nextLine().equalsIgnoreCase("y")) {
+                player1.resetStats();
+                player2.resetStats();
+            } else if(scanner.nextLine().equalsIgnoreCase("n")) {
+                break;
             }
         }
         if(player1.getGamesWon() > player2.getGamesWon()){
