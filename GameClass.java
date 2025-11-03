@@ -7,9 +7,10 @@ public class GameClass {
         this.dice = dice;
     }
 
-    public void playRound(Player player1, Player player2){
+    public int playRound(Player player1, Player player2){
         int resultPlayer1 = dice.rollDice();
         int resultPlayer2 = dice.rollDice();
+        return resultPlayer1 - resultPlayer2; // negative = player 2 wins.
     }
 
 }

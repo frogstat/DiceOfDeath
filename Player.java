@@ -10,6 +10,24 @@ public class Player {
 
     }
 
+    public String getHealthInfo(){
+        if(health > 75){
+            return name + " looks good!";
+        }
+        else if (health > 50){
+            return name + " looks okay.";
+        }
+        else if (health > 25){
+            return name + " looks bad, man.";
+        }
+        else if (health > 0){
+            return name + " looks almost dead... Uh oh!";
+        }
+        else{
+            return name + " is dead. RIP";
+        }
+    }
+
     public void takeDamage(int dmg) {
         this.health -= dmg;
     }
