@@ -10,8 +10,6 @@ public class Player {
 
     }
 
-
-
     public void takeDamage(int dmg) {
         this.health -= dmg;
     }
