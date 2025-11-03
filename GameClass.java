@@ -19,8 +19,10 @@ public class GameClass {
         int result = getWinner(player1, player2);
         if (result > 0) {
             player2.takeDamage(result * player1.getAttack() * player2.getDefense());
+            getReward(player1);
         } else if (result < 0) {
             player1.takeDamage((result * -1) * player2.getAttack() * player1.getDefense());
+            getReward(player2);
         } else if (result == 0) {
             System.out.println("It's a tie!");
         }

@@ -14,6 +14,8 @@ public class Main {
         System.out.println("**************************");
 
         while(player1.getHealth() > 0 || player2.getHealth() > 0){
+            System.out.println(player1.getHealthInfo());
+            System.out.println(player2.getHealthInfo());
             System.out.print("Type roll to play round: ");
             if(scanner.nextLine().equalsIgnoreCase("roll")){
                 diceOfDeath.playRound(player1, player2);
