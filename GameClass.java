@@ -24,7 +24,7 @@ public class GameClass {
             double damage = result * player1.getAttack() / player2.getDefense();
             System.out.println(player2.getName() + " took " + damage + " damage!");
             player2.takeDamage(damage);
-            System.out.println("WINNER GETS TO ROLL WINNER DIE: ");
+            System.out.println(player1.getName() + " GETS TO ROLL WINNER DIE: ");
             System.out.print("Roll winner die? y/n: ");
             if (scanner.nextLine().equalsIgnoreCase("y")) {
                 getReward(player1);
@@ -34,7 +34,7 @@ public class GameClass {
             double damage = (result * -1) * player2.getAttack() / player1.getDefense();
             System.out.println(player1.getName() + " took " + damage + " damage!");
             player1.takeDamage(damage);
-            System.out.println("WINNER GETS TO ROLL WINNER DIE: ");
+            System.out.println(player2.getName() + " GETS TO ROLL WINNER DIE: ");
             System.out.print("Roll winner die? y/n: ");
             if (scanner.nextLine().equalsIgnoreCase("y")) {
                 getReward(player2);
