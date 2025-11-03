@@ -11,9 +11,10 @@ public class Main {
         Player player2 = new Player("Eric", 100, 0,0);
 
         System.out.println("Welcome to Dice of Death!");
-        System.out.println("**************************");
+
 
         while(player1.getHealth() > 0 && player2.getHealth() > 0){
+            System.out.println("**************************");
             System.out.println(player1.getHealthInfo());
             System.out.println(player2.getHealthInfo());
             System.out.print("Type roll to play round: ");
